@@ -1,0 +1,43 @@
+Step 1.
+    In cmd: > npm create vite
+            ... write the project's name
+            ... choose React & Javascript
+
+Step 2.
+    In VS code editor terminal: > npm i
+    (This will install packages)
+
+Step 3.
+    In terminal ste up eslint: 
+    ..\Projects\project name> npm install --save-dev vite-plugin-eslint eslint-config-react-app eslint
+
+Step 4.
+    Create new file in src: eslintrc.json
+    {
+    "extends": "react-app"
+    }
+
+Step 5.
+    In vite.config.js add import and eslint():
+    import { defineConfig } from "vite";
+    import react from "@vitejs/plugin-react";
+    import eslint from "vite-plugin-eslint";
+
+    // https://vitejs.dev/config/
+    export default defineConfig({
+    plugins: [react(), eslint()],
+    });
+
+Step 6.
+    Delete App.css & index.css, set main.jsx (delete the not needed)
+
+Step 7.
+    Install React snippets (ES7+ React/Redux/React-Native/JS )
+
+Step 8.
+    In App.jsx delete everything, then use snippet rcf to create 
+    function App to be exported
+
+Step 9.
+    In terminal start the server:
+        .\project name> npm run dev
